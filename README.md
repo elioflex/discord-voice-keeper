@@ -115,10 +115,6 @@ You have two options to get the voice channel ID:
      ```cmd
      npm start
      ```
-   - Or run with debug logs enabled:
-     ```cmd
-     npm run debug
-     ```
 
 2. **Running in the Background (Optional)**
    - Install PM2 for process management:
@@ -162,10 +158,9 @@ You have two options to get the voice channel ID:
 ## Features
 
 - Automatically joins specified voice channel
-- Maintains connection with keep-alive mechanism
+- Maintains connection with minimal resource usage
 - Auto-reconnects if disconnected
-- Error handling and logging
-- Configurable connection parameters
+- Simple error handling and logging
 
 ## Important Notes
 
