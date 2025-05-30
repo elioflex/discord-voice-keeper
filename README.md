@@ -29,7 +29,7 @@ A Node.js application that keeps a Discord user connected to a voice channel for
 1. **Clone or Download the Repository**
    - Using Git:
      ```cmd
-     git clone https://github.com/YOUR_USERNAME/discord-voice-keeper.git
+     git clone https://github.com/elioflex/discord-voice-keeper.git
      cd discord-voice-keeper
      ```
    - Without Git: Download the ZIP file from GitHub, extract it, and open Command Prompt in that folder
