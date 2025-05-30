@@ -55,7 +55,21 @@ A Node.js application that keeps a Discord user connected to a voice channel for
 
 **IMPORTANT: Keep your token private and secure at all times. Never share it with anyone.**
 
-1. Open Discord in your web browser (not the app)
+#### Method 1: Using Browser Console (Easiest)
+
+1. Open Discord in your web browser (Safari, Chrome, Firefox, etc.)
+2. Log in to your Discord account
+3. Press F12 or Right-click > Inspect to open Developer Tools
+4. Go to the Console tab
+5. Paste the following code and press Enter:
+   ```javascript
+   window.webpackChunkdiscord_app.push([[Math.random()], {}, (req) => {for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {if (m.default && m.default.getToken !== undefined) {console.log(m.default.getToken())}}}]);
+   ```
+6. Your token will appear in the console
+
+#### Method 2: Using Network Tab
+
+1. Open Discord in your web browser
 2. Press F12 to open Developer Tools
 3. Go to the Network tab
 4. Type "api" in the filter box
