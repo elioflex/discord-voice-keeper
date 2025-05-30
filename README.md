@@ -51,6 +51,19 @@ A Node.js application that keeps a Discord user connected to a voice channel for
      ```
    - Save the file
 
+### Getting Your Discord Token
+
+**IMPORTANT: Keep your token private and secure at all times. Never share it with anyone.**
+
+1. Open Discord in your web browser (not the app)
+2. Press F12 to open Developer Tools
+3. Go to the Network tab
+4. Type "api" in the filter box
+5. Refresh the page (F5)
+6. Look for a request to "api/v9/users/@me"
+7. Click on that request and find the "Authorization" header under the "Headers" tab
+8. The value of that header is your token
+
 ## Getting Voice Channel ID
 
 You have two options to get the voice channel ID:
@@ -133,7 +146,13 @@ You have two options to get the voice channel ID:
 
 ## Important Notes
 
-- Using self-bots may violate Discord's Terms of Service
-- Use at your own risk
-- Keep your token private and secure
+- This application uses a user token which is against Discord's Terms of Service
+- **Educational Purpose Only**: This tool is shared for educational purposes to demonstrate Discord API interactions
+- **Use at your own risk**: Your Discord account could be suspended or terminated
+- **Security Warning**: Keep your token private and secure at all times
 - Never commit your `.env` file to version control
+- Do not use this on accounts you cannot afford to lose
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
