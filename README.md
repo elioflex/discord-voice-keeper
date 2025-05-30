@@ -53,9 +53,9 @@ A Node.js application that keeps a Discord user connected to a voice channel for
 
 ### Getting Your Discord Token
 
-**IMPORTANT: Keep your token private and secure at all times. Never share it with anyone.**
+**IMPORTANT: Keep your token private and secure at all times. Never share it with anyone or paste it in chat windows. If you accidentally expose your token, reset it immediately by changing your Discord password.**
 
-#### Method 1: Using Browser Console (Easiest)
+#### Method 1: Using Browser Console (Safest - Copies to Clipboard)
 
 1. Open Discord in your web browser (Safari, Chrome, Firefox, etc.)
 2. Log in to your Discord account
@@ -63,9 +63,10 @@ A Node.js application that keeps a Discord user connected to a voice channel for
 4. Go to the Console tab
 5. Paste the following code and press Enter:
    ```javascript
-   window.webpackChunkdiscord_app.push([[Math.random()], {}, (req) => {for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {if (m.default && m.default.getToken !== undefined) {console.log(m.default.getToken())}}}]);
+   window.webpackChunkdiscord_app.push([[Math.random()], {}, (req) => {for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {if (m.default && m.default.getToken !== undefined) {navigator.clipboard.writeText(m.default.getToken()); console.log('Token copied to clipboard!')}}}]);
    ```
-6. Your token will appear in the console
+6. Your token will be copied to your clipboard (you'll see "Token copied to clipboard!" in the console)
+7. Paste it directly into your `.env` file
 
 #### Method 2: Using Network Tab
 
